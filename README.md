@@ -37,11 +37,11 @@ The program will ask for the user to input the path to the most current loan dat
 
 The application will ask for user inputted values for their credit score, monthly debt, monthly income, total loan amount, and value of the home they are looking to purchase.
 
-![User Input](.\images\user_input.png)
+![User Input](\images\user_input.png)
 
 The application will return the user's monthly debt-to-income ratio, their loan-to-value ratio, and the number of loans they qualify for from the `daily rate sheet`.
 
-![Ratio Returns](.\images\ratio_returns.png)
+![Ratio Returns](\images\ratio_returns.png)
 
 Finally, the application will create a CSV file `qualifiying loans` consisting of every loan the user qualies for.
 
