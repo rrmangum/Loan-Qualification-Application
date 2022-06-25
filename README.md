@@ -33,7 +33,7 @@ python loan_qualifier_app.py
 ```
 The program will ask for the user to input the path to the most current loan data from a preformatted CSV file, `daily rate sheet`, that looks like the following:
 
-![Excel file showcasing the loan data format](https://github.com/rrmangum/loan-qualification-application/blob/main/images/input_data_format.png)
+![Excel file showcasing the loan data format](https://github.com/rrmangum/loan-qualification-application/blob/main/images/input_data_format.png?raw=true)
 
 The application will ask for user inputted values for their credit score, monthly debt, monthly income, total loan amount, and value of the home they are looking to purchase.
 
