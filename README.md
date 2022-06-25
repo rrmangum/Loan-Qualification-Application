@@ -34,6 +34,7 @@ python loan_qualifier_app.py
 The program will ask for the user to input the path to the most current loan data from a preformatted CSV file, `daily rate sheet`, that looks like the following:
 
 ![Excel file showcasing the loan data format](/images/input_data_format.png)
+![Stock Finance Image](https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmluYW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)
 
 The application will ask for user inputted values for their credit score, monthly debt, monthly income, total loan amount, and value of the home they are looking to purchase.
 
