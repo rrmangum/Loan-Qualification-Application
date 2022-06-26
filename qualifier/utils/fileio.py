@@ -5,7 +5,7 @@ This contains a helper function for loading and saving CSV files.
 
 """
 import csv
-
+import questionary
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -29,18 +29,41 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-
-def save_csv(csvpath, data, header=None):
+def save_csv(qualifying_loans):
     """Saves the CSV file from path provided.
 
     Args:
         csvpath (Path): The CSV file path.
         data (list of lists): A list of the rows of data for the CSV file.
-        header (list): An optional header for the CSV.
-
     """
-    with open(csvpath, "w", newline="") as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
-        if header:
-            csvwriter.writerow(header)
-        csvwriter.writerows(data)
+
+    user_save_decision = questionary.confirm("Do you want to save the list of qualifying loans?").ask()
+    
+    if user_save_decision == True:
+        if not qualifying_loans:
+            print("You do not currently qualify for any available loans.")
+        else:
+            user_save_path = questionary.path("Where do you want to save the list of qualifying loans? (enter file path that ends in .csv)").ask()
+
+            header = [
+                "Loan Name", 
+                "Max Loan Amount", 
+                "Loan to Value Ratio", 
+                "Debt to Income Ratio", 
+                "Credit Score", 
+                "Interest Rate"
+            ]
+            
+            with open(user_save_path, "w", newline="") as csvfile:
+                csvwriter = csv.writer(csvfile, delimiter=',')
+                if header:
+                    csvwriter.writerow(header)
+                csvwriter.writerows(qualifying_loans)
+
+    else:
+        if not qualifying_loans:
+            print("You do not currently qualify for any available loans.")
+        else:
+            print(f"Here are the loans you qualify for:")
+            print("[Loan Name, Max Loan Amount, Loan-to-Value Ratio, Debt-to-Income Ratio, Credit Score, Interest Rate]")
+            print('\n'.join(str(loan) for loan in qualifying_loans))
