@@ -48,6 +48,10 @@ The application will ask the user if they want to save the list of qualifying lo
 
 ![Tabulate List of Loans](https://github.com/rrmangum/Loan_Qualification_Application/blob/main/images/Tabulate_List_of_Loans.png?raw=true)
 
+If the user inputs `y`, the application will ask the user for a save destination (file path ending in .csv)
+
+![Save Path - File Destination](https://github.com/rrmangum/Loan_Qualification_Application/blob/main/images/Save_Path.png?raw=true)
+
 ---
 
 ## Contributors
@@ -58,7 +62,7 @@ Ryan Mangum - [LinkedIn](https://www.linkedin.com/in/ryanrmangum/) | rrmangum@gm
 
 ## License
 
-MIT License
+[MIT License](https://choosealicense.com/licenses/mit/)
 
 Copyright (c) [2022] [Ryan Mangum]
 
