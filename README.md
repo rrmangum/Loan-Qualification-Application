@@ -20,6 +20,7 @@ To install this program run the following commands in your terminal or gitbash:
 ```python
 pip install fire
 pip install questionary
+pip intsall tabulate
 ```
 
 ---
