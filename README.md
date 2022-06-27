@@ -9,8 +9,8 @@ This is a python command-line interface application that allows users to see qua
 This program uses Python 3.9.12 and the following libraries:
 * [Fire](https://github.com/google/python-fire/blob/master/docs/guide.md) - Creates the Command Line Interface (CLI) for users to interact with the program.
 * [Questionary](https://pypi.org/project/questionary/#documentation) - Allows users to input specific loan qualifying criteria such as credit scores, monthly debt, monthly income, property value, and requested loan amount.
-* [Pathlib](https://docs.python.org/3/library/pathlib.html) - Provides the path to a CSV database
-
+* [Pathlib](https://docs.python.org/3/library/pathlib.html) - Provides the path to a CSV database.
+* [Tabulate](https://pypi.org/project/tabulate/) - Organizes the list of qualifying loans into a table format within the CLI if the user decides to not save the data as a CSV.
 ---
 
 ## Installation Guide
