@@ -1,0 +1,25 @@
+    1  git config --global user.name "GregaiousGainz"
+    2  git config --global user.name
+    3  git config --global user.email "rrmangum@gmail.com"
+    4  git config --global user.email
+    5  cd desktop
+    6  cd fintech_workspace
+    7  cd challenges
+    8  cd challenge_2
+    9  cd loan_qualification_application
+   10  ls
+   11  conda activate dev
+   12  git status
+   13  git commit -m "Added an image of the save destination"
+   14  git push
+   15  git status
+   16  python loan_qualifier_app.py
+   17  git status
+   18  git add qualifier/utils/fileio.py
+   19  git commit -m "Added descriptive comments throughout"
+   20  git push
+   21  git status
+   22  git add Loan_Qualifier_App.py
+   23  git commit -m "Cleaned up the code, and added comments throughout"
+   24  git push
+   25  history 50 > terminal_history.txt
