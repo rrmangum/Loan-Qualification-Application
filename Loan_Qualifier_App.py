@@ -28,6 +28,7 @@ def load_bank_data():
 
 def get_applicant_info():
     """Prompts the user for their loan information"""
+
     credit_score = questionary.text("What's your credit score?").ask()
     debt = questionary.text("What is your monthly debt?").ask()
     income = questionary.text("What is your monthly income?").ask()
@@ -63,7 +64,6 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
         A list of the banks willing to underwrite the loan.
 
     """
-
     # Calculate the monthly debt ratio
     monthly_debt_ratio = calculate_monthly_debt_ratio(debt, income)
     print(f"The monthly debt to income ratio is {monthly_debt_ratio:.02f}")
@@ -102,7 +102,3 @@ def run():
 
 if __name__ == "__main__":
     fire.Fire(run)
-
-# Command Line Instruction
-# python app.py --credit_score=750 --debt=5000 --income=20000
-# python app.py --credit_score=805 --debt=3000 --income=8000
