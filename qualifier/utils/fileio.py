@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Helper functions to load and save CSV data.
 
 This contains a helper function for loading and saving CSV files.
@@ -6,6 +5,7 @@ This contains a helper function for loading and saving CSV files.
 """
 import csv
 import questionary
+from tabulate import tabulate
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -65,5 +65,11 @@ def save_csv(qualifying_loans):
             print("You do not currently qualify for any available loans.")
         else:
             print(f"Here are the loans you qualify for:")
-            print("[Loan Name, Max Loan Amount, Loan-to-Value Ratio, Debt-to-Income Ratio, Credit Score, Interest Rate]")
-            print('\n'.join(str(loan) for loan in qualifying_loans))
+            print(tabulate(qualifying_loans, headers = [
+                "Loan Name", 
+                "Max Loan Amounts", 
+                "Loan to Value Ratio", 
+                "Debt to Income Ratio",
+                "Credit Score",
+                "Interest Rate"
+                ]))
