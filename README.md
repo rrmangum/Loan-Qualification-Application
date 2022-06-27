@@ -32,7 +32,7 @@ To execute this program run the following commands in your terminal or gitbash:
 ```
 python loan_qualifier_app.py
 ```
-The program will ask for the user to input the path to the most current loan data from a preformatted CSV file, `daily rate sheet`, that looks like the following:
+The application will ask for the user to input the path to the most current loan data from a preformatted CSV file, `daily rate sheet`, that looks like the following:
 
 ![Excel file showcasing the loan data format](https://github.com/rrmangum/Loan-Qualification-Application/blob/main/images/Input_Data_Format.png?raw=true)
 
@@ -44,7 +44,9 @@ The application will return the user's monthly debt-to-income ratio, their loan-
 
 ![Ratio Returns](https://github.com/rrmangum/Loan-Qualification-Application/blob/main/images/Ratio_Returns.png?raw=true)
 
-Finally, the application will create a CSV file `qualifiying loans` consisting of every loan the user qualies for.
+The application will ask the user if they want to save the list of qualifying loans, if the user inputs `n`, the list of loans will be displayed as a table in the CLI.
+
+![Tabulate List of Loans](https://github.com/rrmangum/Loan_Qualification_Application/blob/main/images/Tabulate_List_of_Loans.png?raw=true)
 
 ---
 
