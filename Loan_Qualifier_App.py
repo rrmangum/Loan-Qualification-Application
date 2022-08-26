@@ -82,6 +82,41 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
+def save_qualifying_loans(qualifying_loans):
+    
+    """User dialog"""
+     # Ask the user if they want to save the list of loans - Acceptance Criteria #1 and #3
+    user_save_decision = questionary.confirm("Do you want to save the list of qualifying loans?").ask()
+        
+    if user_save_decision == True:
+
+        # If the user does not qualify for any loans, program notifies user and exits - Acceptance Criteria #2
+        if not qualifying_loans:
+            print("You do not currently qualify for any available loans.")
+        # If the user qualifies for loans and chooses to save the file, the program asks for the file path - Acceptance Criteria #4
+        else:
+            user_save_path = questionary.path("Where do you want to save the list of qualifying loans? (enter file path that ends in .csv)").ask()
+            save_csv(qualifying_loans, user_save_path)
+  
+
+    else:
+
+        # If the user does not choose to save the file, the program checks to see if the user qualified for any loans, if not then informs the user and exits
+        if not qualifying_loans:
+            print("You do not currently qualify for any available loans.")
+            
+        # If the user does not choose to save the file, but qualifies for loans, the program will return the list of qualifying loans in a table format
+        else:
+            print(f"Here are the loans you qualify for:")
+            print(tabulate(qualifying_loans, headers = [
+                "Loan Name", 
+                "Max Loan Amounts", 
+                "Loan to Value Ratio", 
+                "Debt to Income Ratio",
+                "Credit Score",
+                "Interest Rate"
+            ]))
+
 def run():
     """The main function for running the script."""
 
@@ -97,7 +132,7 @@ def run():
     )
 
     # Save qualifying loans
-    save_csv(qualifying_loans)
+    save_qualifying_loans(qualifying_loans)
 
 
 if __name__ == "__main__":
